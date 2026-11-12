@@ -10,35 +10,67 @@ body {
     overflow: hidden;
     font-family: 'Jua', sans-serif;
 }
+
 #bg1 {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     border: 3px solid rgb(51, 51, 51);
-    padding: 50px;
-    height: 50vh;
+    padding: 2%;
+    /*height: 50vh;*/
     width: 50%;
 }
 #bg1::-webkit-scrollbar {
     display: none;
+}
+.buttons1234 {
+    display: flex;
+    justify-content: space-between;
 }
 #btn1, #btn2, #btn3, #btn4 {
     font-family: 'Jua', sans-serif;
     border: none;
     background-color: white;
     font-size: 23px;
-    margin-left: 20px;
     color: gray;
 }
 #btn1:focus, #btn2:focus, #btn3:focus, #btn4:focus {
     border-bottom: 3px solid black;
     color: black;
 } 
-@media only screen and (max-width: 1524px ) {
-    #bg1 {
-        overflow: scroll;
+
+@media (min-width: 100px ) and (max-width: 900px ) {
+    html {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        height: 100%;
     }
     body {
-        height: 100%;
-        overflow: hidden; /* Hide scrollbars */
+        margin: 0;
+        padding: 0;
+        border: 0;
+        min-height: 100%;
+        max-width: 100%;
     }
+    #bg1 {
+        width: 80%; 
+        max-height: 80%;
+        overflow: scroll;
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    span {
+        overflow-x: scroll;
+        padding: 3%;
+    }
+    span::-webkit-scrollbar {
+        display: none;
+    }
+    .wrapEm {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: scroll;
+    }  
 }
