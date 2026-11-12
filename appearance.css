@@ -38,6 +38,7 @@ body {
     color: black;
 } 
 
+
 @media (min-width: 100px ) and (max-width: 900px ) {
     html {
         margin: 0;
